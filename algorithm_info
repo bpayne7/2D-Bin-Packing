@@ -1,0 +1,73 @@
+   PACKING ALGORITHMS
+   ------------------
+
+   Author: Brian Payne
+
+   CS505 Spring 2015
+
+   Lab 11/12 - Final project
+
+
+   INTRO
+   -----
+
+   Bin packing is a term used to decribe packing smaller items into defined spaces.
+   A NP-Hard problem, there are many applications of bin packing as it applies 
+   to filling up containers, loading trucks with weight capacity contraints, 
+   creating file backups, and technology mapping in chip design. There are also 2D 
+   applications such as cutting stock(known as nesting), minimizing the waste of 
+   material and maximizing use of the material. In these programs that have been 
+   developed for CS505, the focus was on the nesting, and minimizing wasted 
+   space in stacking a 2D bin or cutting rectangles from a sheet.
+
+
+   DEVELOPMENT
+   -----------
+   
+   In first researching this problem, I came across a bin packing simulation 
+   produced by Heidi Smith with the Cardiff School of Computer Science & 
+   Informatics. These simulations are shown here:
+   
+   First Fit 
+   http://users.cs.cf.ac.uk/C.L.Mumford/heidi/FFDHquarters.html
+
+   Next Fit
+   http://users.cs.cf.ac.uk/C.L.Mumford/heidi/NFDHquarters.html
+
+   These simulations really helped define what I wanted to show in this project.
+   The act of packing a simple small area with rectangles is easy to the human 
+   mind, but is quite complex when a computer is tasked with this problem. The 
+   first fit algorithm was developed using some of  CHIDA 's framework in 
+   python3 (http://pastebin.com/4UPszFd8). I then developed the next fit
+   algorithm changing the first fit algorithm. I then decided that making the  
+   "packer_nodes.py" would be good for explaining what is going on under the 
+   hood of the algorithm. 
+
+   I learned the key to a good packing algorithm is sorting your items to sort 
+   first. This allows the bigger items to be better allocated to the given space.
+
+
+   FIRST FIT ALGORITHM
+   -------------------
+   
+   Once the blocks are sorted, the first block(largest) is placed. Each time
+   a block is placed, the nodes are sorted. The blocks are placed big to small,
+   and as soon as a small block can fit it places it in an older node, versus
+   creating a new node. You can see these nodes by running "packer_nodes.py".
+
+
+   NEXT FIT ALGORITHM
+   ------------------
+   
+   This algorithm is a lot simpler. Once the blocks are sorted, the blocks are
+   placed with no regard to where the blank space is. Essentially the blocks are
+   placed in order, from small to big.
+
+
+   CONCLUSION
+   ----------
+
+   I had a good time programming this algorithm, even though it was pretty hard 
+   to start. I went through about 5-6 different framworks till I found one that
+   really worked for me. Thank you for this semester!
+   
